@@ -14,7 +14,7 @@ var showRacks = function(rack){
             console.log(currElement.children().length);
             console.log($("#list0 li").length);
             if(currElement.children().length>8){
-                currElement.append(`<u2 id =${"list"+counter}></u2>`);
+                ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
                 currElement = (`#${"list"+counter++}`);
             }   
             currElement.append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);
