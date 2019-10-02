@@ -8,7 +8,7 @@ var showRacks = function(rack){
         
     }
     ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
-    currElement = (`#${"list"+counter++}`);
+    currElement = $(`#${"list"+counter++}`);
     rack["words"].filter(Boolean).map(racks=>
         {
             if(currElement.length>8){
