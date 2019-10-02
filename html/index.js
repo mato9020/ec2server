@@ -1,11 +1,21 @@
 
 const charLimit = 7;
-
-
+var counter=0;
 var showRacks = function(rack){
     var words = rack["words"];
+    var currElement = $("#bingos");
+    if($("#bingos").length>8){
+        
+    }
+   
     rack["words"].filter(Boolean).map(racks=>
-        {$("#bingos").append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);});
+        {
+            if(currElement.length>8){
+                ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
+                currElement = (`#${"list"+counter++}`);
+            }   
+            currElement.append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);
+        });
     document.getElementById("Rack").innerHTML = rack["rack"];
 };
 var genericGetRequest = function(){
