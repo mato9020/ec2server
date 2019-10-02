@@ -12,7 +12,7 @@ var showRacks = function(rack){
     rack["words"].filter(Boolean).map(racks=>
         {
             if(currElement.length>8){
-                ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
+                currElement.append(`<u2 id =${"list"+counter}></u2>`);
                 currElement = (`#${"list"+counter++}`);
             }   
             currElement.append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);
