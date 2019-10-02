@@ -8,12 +8,12 @@ var showRacks = function(rack){
         
     }
     ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
-    currElement = $(`#${"list"+counter++} li`);
+    currElement = $(`#${"list"+counter++}`);
     rack["words"].filter(Boolean).map(racks=>
         {
-            if(currElement.length>8){
+            if(currElement.children().length>8){
                 currElement.append(`<u2 id =${"list"+counter}></u2>`);
-                currElement = (`#${"list"+counter++} li`);
+                currElement = (`#${"list"+counter++}`);
             }   
             currElement.append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);
         });
