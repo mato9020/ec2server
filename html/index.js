@@ -11,6 +11,8 @@ var showRacks = function(rack){
     currElement = $(`#${"list"+counter++}`);
     rack["words"].filter(Boolean).map(racks=>
         {
+            console.log(currElement.children().length);
+            console.log($("#list0 li").length);
             if(currElement.children().length>8){
                 currElement.append(`<u2 id =${"list"+counter}></u2>`);
                 currElement = (`#${"list"+counter++}`);
