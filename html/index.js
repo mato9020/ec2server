@@ -16,7 +16,8 @@ var showRacks = function(rack){
                 currElement = $(`#${"list"+counter++}`);
             }
             var placeString = '_';   
-            currElement.append(`<li><span class = "answer" id=${racks}>${placeString.repeat(rack.length)}</span></li>`);
+            placeString.repeat(rack.length);
+            currElement.append(`<li><span class = "answer" id=${racks}>${placeString}</span></li>`);
         });
     document.getElementById("Rack").innerHTML = rack["rack"];
 };
