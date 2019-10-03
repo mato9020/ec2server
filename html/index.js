@@ -15,8 +15,8 @@ var showRacks = function(rack){
                 ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
                 currElement = $(`#${"list"+counter++}`);
             }
-            var placeString = "_".repeat(rack.length);   
-            currElement.append(`<li><span class = "answer" id=${racks}>${placeString}</span></li>`);
+            var placeString = '_';   
+            currElement.append(`<li><span class = "answer" id=${racks}>${placeString.repeat(rack.length)}</span></li>`);
         });
     document.getElementById("Rack").innerHTML = rack["rack"];
 };
