@@ -20,6 +20,7 @@ u2{
     border-color:black;
 }
 li{
+    padding:5px;
     border-style: solid;
     border-width: 5px;
     border-color:black;
