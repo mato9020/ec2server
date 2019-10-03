@@ -16,7 +16,7 @@ var showRacks = function(rack){
                 currElement = $(`#${"list"+counter++}`);
             }
             var placeString = '_';   
-            placeString.repeat(racks.length);
+            placeString = placeString.repeat(racks.length);
             currElement.append(`<li><span class = "answer" id=${racks}>${placeString}</span></li>`);
         });
     document.getElementById("Rack").innerHTML = rack["rack"];
