@@ -14,8 +14,9 @@ var showRacks = function(rack){
             if(currElement.children().length>8){
                 ($("#bingos")).append(`<u2 id =${"list"+counter}></u2>`);
                 currElement = $(`#${"list"+counter++}`);
-            }   
-            currElement.append(`<li><span class = "answer hidden" id=${racks}>${racks}</span></li>`);
+            }
+            var placeString = "_".repeat(rack.length);   
+            currElement.append(`<li><span class = "answer" id=${racks}>${placeString}</span></li>`);
         });
     document.getElementById("Rack").innerHTML = rack["rack"];
 };
@@ -27,7 +28,7 @@ $("#WordEntered").on('click',function() {
     var enteredWord = document.getElementById("GuessBox").value.toUpperCase();
     var x = document.getElementById(enteredWord);
     if(x!=null){
-        document.getElementById(enteredWord).style.display = "block";
+        document.getElementById(enteredWord).innerHTML = enteredWord;
     }
 });
 
