@@ -34,6 +34,10 @@ $("#WordEntered").on('click',function() {
 });
 
 $("#generateRack").on('click', function(){
+    const node= $("#bingos");
+    while(node.firstChild){
+        node.removeChild(node.firstChild);
+    }
     $.ajax({
         url:"api.php",
         method:"GET",
